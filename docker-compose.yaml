@@ -4,7 +4,6 @@ services:
   oracle-xe-11g-r2:
     build: ./
     container_name: oracle-xe-11g-r2
-    command: /usr/sbin/startup.sh
     restart: always
     ports:
       - "1521:1521"
