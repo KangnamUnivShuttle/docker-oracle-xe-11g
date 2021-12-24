@@ -2,7 +2,7 @@ version: "3"
 
 services:
   oracle-xe-11g-r2:
-    image: wnameless/oracle-xe-11g-r2:18.04-apex
+    build: ./
     container_name: oracle-xe-11g-r2
     command: /usr/sbin/startup.sh
     restart: always
