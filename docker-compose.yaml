@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  oracle-xe-11g-r2:
+    image: wnameless/oracle-xe-11g-r2:18.04-apex
+    container_name: oracle-xe-11g-r2
+    command: /usr/sbin/startup.sh
+    restart: always
+    ports:
+      - "1521:1521"
+      - "9090:8080"
+    environment:
+      - TZ=Asia/Seoul
+    volumes:
+      - ./oracle-xe-11g-r2:/u01/app/oracle/oradata
